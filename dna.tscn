@@ -6,35 +6,48 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_14oti")
-mutation_rate = 0.5
 
 [node name="DisplayCanvas" type="Node2D" parent="."]
 
 [node name="GenerationLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 102.0
+offset_bottom = 27.0
+text = "Generation: "
 
 [node name="PopulationLabel" type="Label" parent="."]
-offset_top = 35.0
-offset_right = 40.0
-offset_bottom = 58.0
+offset_left = 6.0
+offset_top = 32.0
+offset_right = 95.0
+offset_bottom = 55.0
+text = "Population:"
 
 [node name="BestFitnessLabel" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 118.0
+offset_right = 132.0
+offset_bottom = 141.0
+text = "best fitness:"
+
+[node name="MutationLabel" type="Label" parent="."]
+offset_left = 5.0
 offset_top = 59.0
-offset_right = 40.0
+offset_right = 99.0
 offset_bottom = 82.0
+text = "mutation:"
 
 [node name="BestPanel" type="Panel" parent="."]
 offset_left = 59.0
 offset_top = 153.0
-offset_right = 527.0
-offset_bottom = 610.0
+offset_right = 474.0
+offset_bottom = 543.0
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 545.0
-offset_top = 159.0
-offset_right = 1076.0
-offset_bottom = 607.0
+offset_left = 510.0
+offset_top = 148.0
+offset_right = 910.0
+offset_bottom = 536.0
 
 [node name="SubViewportContainer_BestFit" type="SubViewportContainer" parent="."]
 offset_left = 102.0
@@ -50,13 +63,13 @@ size = Vector2i(346, 339)
 size_2d_override = Vector2i(128, 128)
 render_target_update_mode = 4
 
-[node name="CandidateRenderer" parent="SubViewportContainer_BestFit/SubViewport" instance=ExtResource("2_k673e")]
+[node name="BestCandidateRenderer" parent="SubViewportContainer_BestFit/SubViewport" instance=ExtResource("2_k673e")]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_left = 579.0
-offset_top = 187.0
-offset_right = 925.0
-offset_bottom = 526.0
+offset_left = 540.0
+offset_top = 180.0
+offset_right = 886.0
+offset_bottom = 519.0
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
@@ -69,6 +82,44 @@ render_target_update_mode = 4
 [node name="CandidateRenderer" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_k673e")]
 
 [node name="TargetImage" type="Sprite2D" parent="."]
-position = Vector2(553, 71)
-scale = Vector2(1.04297, 1.00781)
+position = Vector2(509, 56)
+scale = Vector2(0.692871, 0.662896)
 texture = ExtResource("3_syva3")
+
+[node name="best" type="Label" parent="."]
+offset_left = 299.0
+offset_top = 125.0
+offset_right = 339.0
+offset_bottom = 148.0
+text = "BEST"
+
+[node name="current" type="Label" parent="."]
+offset_left = 634.0
+offset_top = 128.0
+offset_right = 694.0
+offset_bottom = 151.0
+text = "Current"
+
+[node name="pop" type="Label" parent="."]
+offset_left = 777.0
+offset_top = -3.0
+offset_right = 916.0
+offset_bottom = 20.0
+text = "Population Debug"
+
+[node name="population" type="Node2D" parent="."]
+position = Vector2(737, 2)
+
+[node name="target" type="Label" parent="."]
+offset_left = 369.0
+offset_top = 6.0
+offset_right = 454.0
+offset_bottom = 29.0
+text = "Target:"
+
+[node name="BestGenerationLabel" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 86.0
+offset_right = 189.0
+offset_bottom = 109.0
+text = "best generation"
